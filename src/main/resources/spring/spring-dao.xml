@@ -8,7 +8,16 @@
 
     <!-- 配置整合mybatis过程 -->
     <!-- 1.配置数据库相关参数properties的属性：${url} -->
-    <context:property-placeholder location="classpath:/jdbc.properties" />
+    <!--<context:property-placeholder location="classpath:/jdbc.properties" />-->
+    <!-- 1.配置数据库相关参数properties的属性：${url} -->
+    <bean class="com.yingsh.o2o.util.EncryptPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+            </list>
+        </property>
+        <property name="fileEncoding" value="UTF-8" />
+    </bean>
 
     <!-- 2.数据库连接池 -->
     <bean id="abstractDataSource" abstract="true"
