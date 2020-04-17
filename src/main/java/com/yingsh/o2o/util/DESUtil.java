@@ -94,7 +94,7 @@ public class DESUtil {
 
 	public static void main(String[] args) {
 		System.out.println(getEncryptString("yingsh"));
-		System.out.println(getEncryptString("147258!"));
+		System.out.println(getEncryptString("147258"));
 	}
 
 }
