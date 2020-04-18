@@ -2,6 +2,7 @@ package com.yingsh.o2o.dao;
 
 import com.yingsh.o2o.BaseTest;
 import com.yingsh.o2o.entity.Area;
+import com.yingsh.o2o.service.CacheService;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,6 @@ public class AreaDaoTest extends BaseTest {
     private AreaDao areaDao;
 
     @Test
-    @Ignore
     public void testQueryArea(){
         List<Area> areaList = areaDao.QueryArea();
         assertEquals(2,areaList.size());
